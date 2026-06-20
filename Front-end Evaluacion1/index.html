@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentaFácil - Gestión de Vehículos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Gestión de Vehículos RentaFácil</h1>
+
+    <!-- FORMULARIO -->
+    <div class="formulario">
+
+        <input type="text"
+               id="modelo"
+               placeholder="Modelo">
+
+        <input type="text"
+               id="categoria"
+               placeholder="Categoría">
+
+        <input type="text"
+               id="descripcion"
+               placeholder="Descripción">
+
+        <input type="number"
+               id="precio"
+               placeholder="Precio por día">
+
+        <input type="number"
+               id="unidades"
+               placeholder="Unidades disponibles">
+
+        <button onclick="guardarVehiculo()">
+            Guardar Vehículo
+        </button>
+
+    </div>
+
+    <hr>
+
+    <!-- BUSCAR POR ID -->
+    <h2>Buscar Vehículo por ID</h2>
+
+    <div class="busqueda">
+
+        <input type="number"
+               id="buscarId"
+               placeholder="Ingrese ID">
+
+        <button onclick="buscarPorId()">
+            Buscar
+        </button>
+
+    </div>
+
+    <div id="resultadoBusqueda"></div>
+
+    <hr>
+
+    <!-- LISTAR -->
+    <h2>Vehículos Registrados</h2>
+
+    <button onclick="listarVehiculos()">
+        Actualizar Lista
+    </button>
+
+    <table>
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Modelo</th>
+            <th>Categoría</th>
+            <th>Precio por Día</th>
+            <th>Unidades</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+
+        <tbody id="tablaVehiculos">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
